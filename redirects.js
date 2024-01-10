@@ -49,9 +49,8 @@ module.exports = async () => {
           typeof reference.value === 'object' &&
           reference?.value?._status === 'published'
         ) {
-          destination = `${process.env.NEXT_PUBLIC_SERVER_URL}/${
-            reference.relationTo !== 'pages' ? `${reference.relationTo}/` : ''
-          }${reference.value.slug}`
+          destination = `${process.env.NEXT_PUBLIC_SERVER_URL}/${reference.relationTo !== 'pages' ? `${reference.relationTo}/` : ''
+            }${reference.value.slug}`
         }
 
         const redirect = {
